@@ -1,5 +1,5 @@
 # discord chat bot service
-This service recives messeges sent on channels and process them as bot reponse.
+This service recives messeges sent on channels and process them as bot user's response.
 
 ## Install discord lib
 ```sh
