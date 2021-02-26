@@ -10,3 +10,5 @@ python3 -m pip install -U discord.py
 ```sh
 python3 main.py
 ```
+
+- Note: Use Python 3.7
