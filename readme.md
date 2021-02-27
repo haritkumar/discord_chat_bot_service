@@ -18,6 +18,10 @@ This service receives messeges sent on discord channel and process them as bot u
 !recent nodejs
 ```
 
+![Google search](img/google_search.png)
+
+![Recent search](img/recent_search.png)
+
 ## Install python dependencies
 ```sh
 python3 -m pip install -r requirements.txt
