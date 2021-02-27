@@ -41,4 +41,4 @@ async def on_message(message):
     else:
         await message.channel.send('Please use !google or !recent as wake words')
 
-client.run('')
+client.run('BOT_OAUTH_TOKEN')
