@@ -7,3 +7,5 @@ CREATE TABLE search_history(
     results TEXT,
     created_date datetime
 );
+
+CREATE INDEX index_term ON search_history (term);

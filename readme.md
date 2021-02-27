@@ -1,9 +1,26 @@
 # discord chat bot service
-This service recives messeges sent on channels and process them as bot user's response.
+This service recives messeges sent on discord channel and process them as bot user's response.
 
-## Install discord lib
+- Bot name `chat_bot`
+- Bot URL to add into the server `https://discord.com/api/oauth2/authorize?client_id=814373294290632714&permissions=0&scope=bot`
+
+## How to use
 ```sh
-python3 -m pip install -U discord.py
+# for google search (it return top 5 results from google search)
+!google games
+!google apple games
+!google nodejs
+!google pokemon
+!google mars
+
+# User history search
+!recent game
+!recent nodejs
+```
+
+## Install python dependencies
+```sh
+python3 -m pip install -r requirements.txt
 ```
 
 ## Run program
@@ -12,8 +29,8 @@ python3 main.py
 ```
 
 ## DB to persist search history
-We are using mysql for persistence. We can use other as well like Mongo, Elastic search for good read ops
+We are using mysql for persistence. We can use other dbs as well like Mongo, Elastic search for better performance
 
-- DB Name `discord_bot`
+- check `db_script.sql`
 
 - Note: Use Python 3.7
