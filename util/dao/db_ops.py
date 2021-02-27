@@ -19,3 +19,14 @@ def add_history(discord_user, term, results):
         db_conn.commit()
     except Error as e:
         print(e)
+
+def get_history(discord_user, term):
+    print("fetching history")
+    get_query = "select results from search_history where discord_user=%s AND term like %s ORDER BY created_date DESC LIMIT 1"
+
+    try:
+        cursor = db_conn.cursor()
+        cursor.execute(get_query, (str(discord_user), "%" + str(term) + "%" ))
+        return cursor.fetchone()
+    except Error as e:
+        print(e)
