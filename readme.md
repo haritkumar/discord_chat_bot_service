@@ -30,6 +30,9 @@ python3 -m pip install -r requirements.txt
 ## Run program
 ```sh
 python3 main.py
+
+# run python script in background
+nohup python3 main.py > output.log &
 ```
 
 ## DB to persist search history
