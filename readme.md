@@ -1,5 +1,5 @@
 # discord chat bot service
-This service recives messeges sent on discord channel and process them as bot user's response.
+This service receives messeges sent on discord channel and process them as bot user's response.
 
 - Bot name `chat_bot`
 - Bot URL to add into the server `https://discord.com/api/oauth2/authorize?client_id=814373294290632714&permissions=0&scope=bot`
