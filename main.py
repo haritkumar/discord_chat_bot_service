@@ -18,16 +18,16 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    elif message.content.startswith('hi'):
+    elif message.content.lower().startswith('hi'):
         await message.channel.send('hey')
 
-    elif message.content.startswith('!google'):
+    elif message.content.lower().startswith('!google'):
         ls = search_results_from_google(message.content, message.author)
         for j in ls:
             if(checkers.is_url(j)):
                 await message.channel.send(j)
 
-    elif message.content.startswith('!recent'):
+    elif message.content.lower().startswith('!recent'):
         res = search_results_from_history(message.content, message.author)
         if res == None:
             await message.channel.send("No recent search found with this term")
