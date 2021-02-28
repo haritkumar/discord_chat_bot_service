@@ -1,6 +1,8 @@
 import discord
 from util.custom_search import *
 from validator_collection import validators, checkers
+import urllib.parse
+
 client = discord.Client()
 
 #on_ready() event is called when the bot is ready to start being used
@@ -25,7 +27,7 @@ async def on_message(message):
         ls = search_results_from_google(message.content, message.author)
         for j in ls:
             if(checkers.is_url(j)):
-                await message.channel.send(j)
+                await message.channel.send(urllib.parse.unquote(j))
 
     elif message.content.lower().startswith('!recent'):
         res = search_results_from_history(message.content, message.author)
@@ -35,10 +37,10 @@ async def on_message(message):
             res_list = str(res).replace("('", "").replace("',)", "").split("\\n")
             for j in res_list:
                 if (checkers.is_url(j)):
-                    print(j)
-                    await message.channel.send(j)
+                    print(urllib.parse.unquote(j))
+                    await message.channel.send(urllib.parse.unquote(j))
 
     else:
         await message.channel.send('Please use !google or !recent as wake words')
 
-client.run('BOT_OAUTH_TOKEN')
+client.run('BOT_TOKEN')

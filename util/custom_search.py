@@ -1,7 +1,6 @@
 from googlesearch import search
 from .dao.db_ops import *
 
-
 def search_results_from_google(messege_content, author):
     print("Google search "+str(messege_content)+" "+str(author))
     query = messege_content.replace("!google", "")
